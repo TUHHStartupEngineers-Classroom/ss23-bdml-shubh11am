@@ -43,9 +43,8 @@ library(yardstick)
 library(rpart.plot)
 ```
 
-
-
 # Modeling
+
 ```{r}
 bike_data_tbl <- readRDS("bike_orderlines.rds")
 bike_data_tbl
@@ -77,6 +76,7 @@ model_sales_tbl %>%
   labs(title = "Total Sales for Each Model",x = "Frame Material", y = "Revenue")
 
 ```
+
 ```{r}
 bike_features_tbl <- readRDS("bike_features_tbl.rds")
 bike_features_tbl <- bike_features_tbl %>% 
@@ -124,11 +124,9 @@ train_data <- train_tbl %>% set_names(str_replace_all(names(train_tbl), " |-", "
 test_data  <- test_tbl  %>% set_names(str_replace_all(names(test_tbl), " |-", "_"))
 ```
 
-
-
-
 # Recipe
-```{r}     
+
+```{r}
 bike_recipe <- recipe(frame_material ~ ., data = train_data) %>% 
   step_dummy(all_nominal(), -all_outcomes()) %>% 
   step_zv(all_predictors()) 
@@ -155,6 +153,7 @@ bike_predict %>%
   roc_curve(truth = frame_material, .pred_aluminium) %>% 
   autoplot()
 ```
+
 ```{r}
 bike_predict %>% 
   roc_curve(truth = frame_material, .pred_carbon) %>% 
@@ -173,6 +172,7 @@ roc_car <- bike_predict %>%
   roc_auc(truth = frame_material, .pred_carbon)
 roc_car
 ```
+
 # Evaluation
 
 ```{r}
@@ -181,7 +181,6 @@ model_01_linear_lm_simple <- linear_reg(mode = "regression") %>%
   fit(price ~ category_2 + frame_material, data = train_data)
 model_01_linear_lm_simple
 ```
-
 
 ```{r}
 test_data <- test_data %>% filter(category_2 != "E-Road")
@@ -239,7 +238,6 @@ new_trail <- tibble(
 ) 
 new_trail
 ```
-
 
 ```{r}
 predict(model_01_linear_lm_simple, new_data = new_trail)
