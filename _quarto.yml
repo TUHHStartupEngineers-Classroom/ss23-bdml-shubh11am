@@ -16,6 +16,8 @@ website:
         menu: 
           - text: "Chapter 1 Challenge"
             file: content/01_journal/Chapter_1_Challenge.qmd
+          - text: "Supervised ML Regression - 2"
+            file: content/01_journal/Supervised_ML_Regression_2.qmd
       - text: "Class notes"
         file: content/02_notes/05_class_notes.qmd
       - text: "Links"
