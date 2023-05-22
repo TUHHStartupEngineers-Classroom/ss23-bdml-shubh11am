@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.2.335">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
 <meta name="author" content="Shubham Kumar Singh">
-
+<meta name="dcterms.date" content="2023-05-21">
 <title>MyLabJournal - 03 Automated Machine Learning with H20</title>
 <style>
 code{white-space: pre-wrap;}
@@ -86,7 +84,6 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
-
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../../site_libs/clipboard/clipboard.min.js"></script>
@@ -108,8 +105,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
-<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
-<script id="quarto-search-options" type="application/json">{
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet"><script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
@@ -127,20 +123,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit"
   }
-}</script>
-
-<link href="../../site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet">
+}</script><link href="../../site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet">
 <script src="../../site_libs/pagedtable-1.1/js/pagedtable.js"></script>
-
-
 </head>
-
 <body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
-      <div class="navbar-container container-fluid">
+  <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg navbar-dark "><div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">MyLabJournal</span>
@@ -151,7 +140,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
-  <li class="nav-item">
+<li class="nav-item">
     <a class="nav-link" href="../../index.html">
  <span class="menu-text">Home</span></a>
   </li>  
@@ -159,8 +148,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-journal" role="button" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Journal</span>
     </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-journal">    
-        <li>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-journal">
+<li>
     <a class="dropdown-item" href="../../content/01_journal/Chapter_1_Challenge.html">
  <span class="dropdown-text">Chapter 1 Challenge</span></a>
   </li>  
@@ -173,7 +162,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
  <span class="dropdown-text">Automated ML with H20</span></a>
   </li>  
     </ul>
-  </li>
+</li>
   <li class="nav-item">
     <a class="nav-link" href="../../content/02_notes/05_class_notes.html">
  <span class="menu-text">Class notes</span></a>
@@ -183,24 +172,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
  <span class="menu-text">Links</span></a>
   </li>  
 </ul>
-              <div class="quarto-toggle-container">
+<div class="quarto-toggle-container">
                   <a href="" class="quarto-color-scheme-toggle nav-link" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
               </div>
               <div id="quarto-search" class="" title="Search"></div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
-    </nav>
-</header>
-<!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+    </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Contents</h2>
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Contents</h2>
    
   <ul class="collapse">
-  <li><a href="#attrition-by-department" id="toc-attrition-by-department" class="nav-link active" data-scroll-target="#attrition-by-department"><span class="toc-section-number">1</span>  Attrition by department</a></li>
+<li><a href="#attrition-by-department" id="toc-attrition-by-department" class="nav-link active" data-scroll-target="#attrition-by-department"><span class="toc-section-number">1</span>  Attrition by department</a></li>
   <li><a href="#attrition-by-job-role" id="toc-attrition-by-job-role" class="nav-link" data-scroll-target="#attrition-by-job-role"><span class="toc-section-number">2</span>  Attrition by job role</a></li>
   <li><a href="#develop-kpi" id="toc-develop-kpi" class="nav-link" data-scroll-target="#develop-kpi"><span class="toc-section-number">3</span>  Develop KPI</a></li>
   <li><a href="#function-to-calculate-attrition-cost" id="toc-function-to-calculate-attrition-cost" class="nav-link" data-scroll-target="#function-to-calculate-attrition-cost"><span class="toc-section-number">4</span>  Function to calculate attrition cost</a></li>
@@ -208,14 +193,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <li><a href="#function-to-convert-counts-to-percentages." id="toc-function-to-convert-counts-to-percentages." class="nav-link" data-scroll-target="#function-to-convert-counts-to-percentages."><span class="toc-section-number">6</span>  Function to convert counts to percentages.</a></li>
   <li><a href="#visualization" id="toc-visualization" class="nav-link" data-scroll-target="#visualization"><span class="toc-section-number">7</span>  Visualization</a></li>
   <li><a href="#challanges" id="toc-challanges" class="nav-link" data-scroll-target="#challanges"><span class="toc-section-number">8</span>  Challanges</a></li>
-  </ul>
-</nav>
+  </ul></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
 <h1 class="title">03 Automated Machine Learning with H20</h1>
 </div>
 
@@ -233,7 +214,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">Invalid Date</p>
+      <p class="date">May 21, 2023</p>
     </div>
   </div>
   
@@ -241,9 +222,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   </div>
   
 
-</header>
-
-<div class="cell" data-hash="Automated_Machine_Learning_with_H2O_cache/html/unnamed-chunk-1_f37b27ae80c88e6e4366e03b2922bef3">
+</header><div class="cell" data-hash="Automated_Machine_Learning_with_H2O_cache/html/unnamed-chunk-1_f37b27ae80c88e6e4366e03b2922bef3">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">library</span>(tidymodels)</span>
 <span id="cb1-2"><a href="#cb1-2"></a><span class="fu">library</span>(tidyverse)</span>
 <span id="cb1-3"><a href="#cb1-3"></a><span class="fu">library</span>(magrittr)</span>
@@ -271,8 +250,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 </div>
 </div>
-<section id="attrition-by-department" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> Attrition by department</h1>
+<section id="attrition-by-department" class="level1" data-number="1"><h1 data-number="1">
+<span class="header-section-number">1</span> Attrition by department</h1>
 <div class="cell" data-hash="Automated_Machine_Learning_with_H2O_cache/html/unnamed-chunk-2_c49bbdebcecce2ccbb031cdd24274a9b">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>dept_job_role_tbl <span class="sc">%&gt;%</span></span>
 <span id="cb2-2"><a href="#cb2-2"></a>  </span>
@@ -297,9 +276,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 </div>
 </div>
-</section>
-<section id="attrition-by-job-role" class="level1" data-number="2">
-<h1 data-number="2"><span class="header-section-number">2</span> Attrition by job role</h1>
+</section><section id="attrition-by-job-role" class="level1" data-number="2"><h1 data-number="2">
+<span class="header-section-number">2</span> Attrition by job role</h1>
 <div class="cell" data-hash="Automated_Machine_Learning_with_H2O_cache/html/unnamed-chunk-3_c9b3527bdcfca199576608de346c42d3">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a>dept_job_role_tbl <span class="sc">%&gt;%</span></span>
 <span id="cb4-2"><a href="#cb4-2"></a>  </span>
@@ -328,9 +306,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 </div>
 </div>
-</section>
-<section id="develop-kpi" class="level1" data-number="3">
-<h1 data-number="3"><span class="header-section-number">3</span> Develop KPI</h1>
+</section><section id="develop-kpi" class="level1" data-number="3"><h1 data-number="3">
+<span class="header-section-number">3</span> Develop KPI</h1>
 <div class="cell" data-hash="Automated_Machine_Learning_with_H2O_cache/html/unnamed-chunk-4_c68f8903567283133640f52f1602ca59">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a>dept_job_role_tbl <span class="sc">%&gt;%</span></span>
 <span id="cb6-2"><a href="#cb6-2"></a>  </span>
@@ -366,9 +343,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 </div>
 </div>
-</section>
-<section id="function-to-calculate-attrition-cost" class="level1" data-number="4">
-<h1 data-number="4"><span class="header-section-number">4</span> Function to calculate attrition cost</h1>
+</section><section id="function-to-calculate-attrition-cost" class="level1" data-number="4"><h1 data-number="4">
+<span class="header-section-number">4</span> Function to calculate attrition cost</h1>
 <div class="cell" data-hash="Automated_Machine_Learning_with_H2O_cache/html/unnamed-chunk-5_47f9c20c7f6c23a7b5dd1f6aded9d800">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a>calculate_attrition_cost <span class="ot">&lt;-</span> <span class="cf">function</span>(</span>
 <span id="cb8-2"><a href="#cb8-2"></a>  </span>
@@ -419,9 +395,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <pre><code>#&gt; [1] 15696667</code></pre>
 </div>
 </div>
-</section>
-<section id="function-creation" class="level1" data-number="5">
-<h1 data-number="5"><span class="header-section-number">5</span> Function creation</h1>
+</section><section id="function-creation" class="level1" data-number="5"><h1 data-number="5">
+<span class="header-section-number">5</span> Function creation</h1>
 <div class="cell" data-hash="Automated_Machine_Learning_with_H2O_cache/html/unnamed-chunk-6_6bdbd07c0e8549d1e406d73ee610ff2e">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a>dept_job_role_tbl <span class="sc">%&gt;%</span></span>
 <span id="cb12-2"><a href="#cb12-2"></a>  </span>
@@ -462,9 +437,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 </div>
 </div>
-</section>
-<section id="function-to-convert-counts-to-percentages." class="level1" data-number="6">
-<h1 data-number="6"><span class="header-section-number">6</span> Function to convert counts to percentages.</h1>
+</section><section id="function-to-convert-counts-to-percentages." class="level1" data-number="6"><h1 data-number="6">
+<span class="header-section-number">6</span> Function to convert counts to percentages.</h1>
 <div class="cell" data-hash="Automated_Machine_Learning_with_H2O_cache/html/unnamed-chunk-7_1846c3dc9a21e74d1e8b69ea671f9897">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a>dept_job_role_tbl <span class="sc">%&gt;%</span></span>
 <span id="cb14-2"><a href="#cb14-2"></a>  <span class="fu">count</span>(Department, JobRole, Attrition)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -565,9 +539,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb19-17"><a href="#cb19-17"></a>  </span>
 <span id="cb19-18"><a href="#cb19-18"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section>
-<section id="visualization" class="level1" data-number="7">
-<h1 data-number="7"><span class="header-section-number">7</span> Visualization</h1>
+</section><section id="visualization" class="level1" data-number="7"><h1 data-number="7">
+<span class="header-section-number">7</span> Visualization</h1>
 <div class="cell" data-hash="Automated_Machine_Learning_with_H2O_cache/html/unnamed-chunk-10_38bf969485e8474028f715680fa91cc2">
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1"></a>dept_job_role_tbl <span class="sc">%&gt;%</span></span>
 <span id="cb20-2"><a href="#cb20-2"></a>  </span>
@@ -603,8 +576,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb20-32"><a href="#cb20-32"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"none"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="Automated_Machine_Learning_with_H2O_files/figure-html/unnamed-chunk-10-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="Automated_Machine_Learning_with_H2O_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid figure-img" width="672"></a></p>
+<figure class="figure"><p><a href="Automated_Machine_Learning_with_H2O_files/figure-html/unnamed-chunk-10-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="Automated_Machine_Learning_with_H2O_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid figure-img" width="672"></a></p>
 </figure>
 </div>
 </div>
@@ -723,8 +695,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="Automated_Machine_Learning_with_H2O_files/figure-html/unnamed-chunk-19-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="Automated_Machine_Learning_with_H2O_files/figure-html/unnamed-chunk-19-1.png" class="img-fluid figure-img" width="672"></a></p>
+<figure class="figure"><p><a href="Automated_Machine_Learning_with_H2O_files/figure-html/unnamed-chunk-19-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="Automated_Machine_Learning_with_H2O_files/figure-html/unnamed-chunk-19-1.png" class="img-fluid figure-img" width="672"></a></p>
 </figure>
 </div>
 </div>
@@ -756,11 +727,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb31-24"><a href="#cb31-24"></a>  </span>
 <span id="cb31-25"><a href="#cb31-25"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section>
-<section id="challanges" class="level1" data-number="8">
-<h1 data-number="8"><span class="header-section-number">8</span> Challanges</h1>
-<section id="descriptive-features-age-gender-marital-status" class="level3">
-<h3 class="anchored" data-anchor-id="descriptive-features-age-gender-marital-status">Descriptive features: age, gender, marital status</h3>
+</section><section id="challanges" class="level1" data-number="8"><h1 data-number="8">
+<span class="header-section-number">8</span> Challanges</h1>
+<section id="descriptive-features-age-gender-marital-status" class="level3"><h3 class="anchored" data-anchor-id="descriptive-features-age-gender-marital-status">Descriptive features: age, gender, marital status</h3>
 <div class="cell" data-hash="Automated_Machine_Learning_with_H2O_cache/html/unnamed-chunk-21_13d0f2b53ccbeee4214a407aa86a2a90">
 <div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1"></a>employee_attrition_tbl <span class="sc">%&gt;%</span></span>
 <span id="cb32-2"><a href="#cb32-2"></a>  <span class="fu">select</span>(Attrition, Gender, MaritalStatus, NumCompaniesWorked, Over18, DistanceFromHome) <span class="sc">%&gt;%</span></span>
@@ -772,15 +741,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="Automated_Machine_Learning_with_H2O_files/figure-html/unnamed-chunk-21-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="Automated_Machine_Learning_with_H2O_files/figure-html/unnamed-chunk-21-1.png" class="img-fluid figure-img" width="672"></a></p>
+<figure class="figure"><p><a href="Automated_Machine_Learning_with_H2O_files/figure-html/unnamed-chunk-21-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="Automated_Machine_Learning_with_H2O_files/figure-html/unnamed-chunk-21-1.png" class="img-fluid figure-img" width="672"></a></p>
 </figure>
 </div>
 </div>
 </div>
-</section>
-<section id="employment-features-department-job-role-job-level" class="level3">
-<h3 class="anchored" data-anchor-id="employment-features-department-job-role-job-level">Employment features: department, job role, job level</h3>
+</section><section id="employment-features-department-job-role-job-level" class="level3"><h3 class="anchored" data-anchor-id="employment-features-department-job-role-job-level">Employment features: department, job role, job level</h3>
 <div class="cell" data-hash="Automated_Machine_Learning_with_H2O_cache/html/unnamed-chunk-22_77a2779b3cc90675ee70ba822c5d4729">
 <div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1"></a>employee_attrition_tbl <span class="sc">%&gt;%</span></span>
 <span id="cb34-2"><a href="#cb34-2"></a>  <span class="fu">select</span>(Attrition, <span class="fu">contains</span>(<span class="st">"employee"</span>), <span class="fu">contains</span>(<span class="st">"department"</span>), <span class="fu">contains</span>(<span class="st">"job"</span>)) <span class="sc">%&gt;%</span></span>
@@ -812,109 +778,86 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="Automated_Machine_Learning_with_H2O_files/figure-html/unnamed-chunk-22-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="Automated_Machine_Learning_with_H2O_files/figure-html/unnamed-chunk-22-1.png" class="img-fluid figure-img" width="672"></a></p>
+<figure class="figure"><p><a href="Automated_Machine_Learning_with_H2O_files/figure-html/unnamed-chunk-22-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="Automated_Machine_Learning_with_H2O_files/figure-html/unnamed-chunk-22-1.png" class="img-fluid figure-img" width="672"></a></p>
 </figure>
 </div>
 </div>
 </div>
-</section>
-<section id="compensation-features-hourlyrate-monthlyincomesalarypercenthike-stockoptionlevel" class="level3">
-<h3 class="anchored" data-anchor-id="compensation-features-hourlyrate-monthlyincomesalarypercenthike-stockoptionlevel">Compensation features: HourlyRate, MonthlyIncome,SalaryPercentHike StockOptionLevel</h3>
+</section><section id="compensation-features-hourlyrate-monthlyincomesalarypercenthike-stockoptionlevel" class="level3"><h3 class="anchored" data-anchor-id="compensation-features-hourlyrate-monthlyincomesalarypercenthike-stockoptionlevel">Compensation features: HourlyRate, MonthlyIncome,SalaryPercentHike StockOptionLevel</h3>
 <div class="cell" data-hash="Automated_Machine_Learning_with_H2O_cache/html/unnamed-chunk-23_c07b0a7cb65471978d32b3b1e1bffa6f">
 <div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1"></a>employee_attrition_tbl <span class="sc">%&gt;%</span></span>
 <span id="cb36-2"><a href="#cb36-2"></a>  <span class="fu">select</span>(Attrition, <span class="fu">contains</span>(<span class="st">"income"</span>), <span class="fu">contains</span>(<span class="st">"rate"</span>), <span class="fu">contains</span>(<span class="st">"salary"</span>), <span class="fu">contains</span>(<span class="st">"stock"</span>)) <span class="sc">%&gt;%</span></span>
 <span id="cb36-3"><a href="#cb36-3"></a>  <span class="fu">plot_ggpairs</span>(Attrition)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="Automated_Machine_Learning_with_H2O_files/figure-html/unnamed-chunk-23-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="Automated_Machine_Learning_with_H2O_files/figure-html/unnamed-chunk-23-1.png" class="img-fluid figure-img" width="672"></a></p>
+<figure class="figure"><p><a href="Automated_Machine_Learning_with_H2O_files/figure-html/unnamed-chunk-23-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="Automated_Machine_Learning_with_H2O_files/figure-html/unnamed-chunk-23-1.png" class="img-fluid figure-img" width="672"></a></p>
 </figure>
 </div>
 </div>
 </div>
-</section>
-<section id="survey-results-satisfaction-level-work-life-balance" class="level3">
-<h3 class="anchored" data-anchor-id="survey-results-satisfaction-level-work-life-balance">Survey Results: Satisfaction level, Work Life Balance</h3>
+</section><section id="survey-results-satisfaction-level-work-life-balance" class="level3"><h3 class="anchored" data-anchor-id="survey-results-satisfaction-level-work-life-balance">Survey Results: Satisfaction level, Work Life Balance</h3>
 <div class="cell" data-hash="Automated_Machine_Learning_with_H2O_cache/html/unnamed-chunk-24_960ec56909632ee7223d62a4afa4cbd4">
 <div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1"></a>employee_attrition_tbl <span class="sc">%&gt;%</span></span>
 <span id="cb37-2"><a href="#cb37-2"></a>  <span class="fu">select</span>(Attrition, <span class="fu">contains</span>(<span class="st">"satisfaction"</span>), <span class="fu">contains</span>(<span class="st">"life"</span>)) <span class="sc">%&gt;%</span></span>
 <span id="cb37-3"><a href="#cb37-3"></a>  <span class="fu">plot_ggpairs</span>(Attrition)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="Automated_Machine_Learning_with_H2O_files/figure-html/unnamed-chunk-24-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="Automated_Machine_Learning_with_H2O_files/figure-html/unnamed-chunk-24-1.png" class="img-fluid figure-img" width="672"></a></p>
+<figure class="figure"><p><a href="Automated_Machine_Learning_with_H2O_files/figure-html/unnamed-chunk-24-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="Automated_Machine_Learning_with_H2O_files/figure-html/unnamed-chunk-24-1.png" class="img-fluid figure-img" width="672"></a></p>
 </figure>
 </div>
 </div>
 </div>
-</section>
-<section id="performance-data-job-involvement-performance-rating" class="level3">
-<h3 class="anchored" data-anchor-id="performance-data-job-involvement-performance-rating">Performance Data: Job Involvement, Performance Rating</h3>
+</section><section id="performance-data-job-involvement-performance-rating" class="level3"><h3 class="anchored" data-anchor-id="performance-data-job-involvement-performance-rating">Performance Data: Job Involvement, Performance Rating</h3>
 <div class="cell" data-hash="Automated_Machine_Learning_with_H2O_cache/html/unnamed-chunk-25_d61f7a55e34d00881925f645d8dcda5f">
 <div class="sourceCode cell-code" id="cb38"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1"></a>employee_attrition_tbl <span class="sc">%&gt;%</span></span>
 <span id="cb38-2"><a href="#cb38-2"></a>  <span class="fu">select</span>(Attrition, <span class="fu">contains</span>(<span class="st">"performance"</span>), <span class="fu">contains</span>(<span class="st">"involvement"</span>)) <span class="sc">%&gt;%</span></span>
 <span id="cb38-3"><a href="#cb38-3"></a>  <span class="fu">plot_ggpairs</span>(Attrition)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="Automated_Machine_Learning_with_H2O_files/figure-html/unnamed-chunk-25-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img src="Automated_Machine_Learning_with_H2O_files/figure-html/unnamed-chunk-25-1.png" class="img-fluid figure-img" width="672"></a></p>
+<figure class="figure"><p><a href="Automated_Machine_Learning_with_H2O_files/figure-html/unnamed-chunk-25-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img src="Automated_Machine_Learning_with_H2O_files/figure-html/unnamed-chunk-25-1.png" class="img-fluid figure-img" width="672"></a></p>
 </figure>
 </div>
 </div>
 </div>
-</section>
-<section id="work-life-features" class="level3">
-<h3 class="anchored" data-anchor-id="work-life-features">Work-Life Features</h3>
+</section><section id="work-life-features" class="level3"><h3 class="anchored" data-anchor-id="work-life-features">Work-Life Features</h3>
 <div class="cell" data-hash="Automated_Machine_Learning_with_H2O_cache/html/unnamed-chunk-26_5bba6032520a5c53fd1681f4fe513bcd">
 <div class="sourceCode cell-code" id="cb39"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1"></a>employee_attrition_tbl <span class="sc">%&gt;%</span></span>
 <span id="cb39-2"><a href="#cb39-2"></a>  <span class="fu">select</span>(Attrition, <span class="fu">contains</span>(<span class="st">"overtime"</span>), <span class="fu">contains</span>(<span class="st">"travel"</span>)) <span class="sc">%&gt;%</span></span>
 <span id="cb39-3"><a href="#cb39-3"></a>  <span class="fu">plot_ggpairs</span>(Attrition)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="Automated_Machine_Learning_with_H2O_files/figure-html/unnamed-chunk-26-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img src="Automated_Machine_Learning_with_H2O_files/figure-html/unnamed-chunk-26-1.png" class="img-fluid figure-img" width="672"></a></p>
+<figure class="figure"><p><a href="Automated_Machine_Learning_with_H2O_files/figure-html/unnamed-chunk-26-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img src="Automated_Machine_Learning_with_H2O_files/figure-html/unnamed-chunk-26-1.png" class="img-fluid figure-img" width="672"></a></p>
 </figure>
 </div>
 </div>
 </div>
-</section>
-<section id="training-and-education" class="level3">
-<h3 class="anchored" data-anchor-id="training-and-education">Training and Education</h3>
+</section><section id="training-and-education" class="level3"><h3 class="anchored" data-anchor-id="training-and-education">Training and Education</h3>
 <div class="cell" data-hash="Automated_Machine_Learning_with_H2O_cache/html/unnamed-chunk-27_32564ec6176308b20c7363fdafb87f45">
 <div class="sourceCode cell-code" id="cb40"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1"></a>employee_attrition_tbl <span class="sc">%&gt;%</span></span>
 <span id="cb40-2"><a href="#cb40-2"></a>  <span class="fu">select</span>(Attrition, <span class="fu">contains</span>(<span class="st">"training"</span>), <span class="fu">contains</span>(<span class="st">"education"</span>)) <span class="sc">%&gt;%</span></span>
 <span id="cb40-3"><a href="#cb40-3"></a>  <span class="fu">plot_ggpairs</span>(Attrition)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="Automated_Machine_Learning_with_H2O_files/figure-html/unnamed-chunk-27-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img src="Automated_Machine_Learning_with_H2O_files/figure-html/unnamed-chunk-27-1.png" class="img-fluid figure-img" width="672"></a></p>
+<figure class="figure"><p><a href="Automated_Machine_Learning_with_H2O_files/figure-html/unnamed-chunk-27-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img src="Automated_Machine_Learning_with_H2O_files/figure-html/unnamed-chunk-27-1.png" class="img-fluid figure-img" width="672"></a></p>
 </figure>
 </div>
 </div>
 </div>
-</section>
-<section id="time-based-features-years-at-company-years-in-current-role" class="level3">
-<h3 class="anchored" data-anchor-id="time-based-features-years-at-company-years-in-current-role">Time-Based Features: Years at company, years in current role</h3>
+</section><section id="time-based-features-years-at-company-years-in-current-role" class="level3"><h3 class="anchored" data-anchor-id="time-based-features-years-at-company-years-in-current-role">Time-Based Features: Years at company, years in current role</h3>
 <div class="cell" data-hash="Automated_Machine_Learning_with_H2O_cache/html/unnamed-chunk-28_5ad503626ef40f6c0e7d85d4ec3c56d4">
 <div class="sourceCode cell-code" id="cb41"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1"></a>employee_attrition_tbl <span class="sc">%&gt;%</span></span>
 <span id="cb41-2"><a href="#cb41-2"></a>  <span class="fu">select</span>(Attrition, <span class="fu">contains</span>(<span class="st">"years"</span>)) <span class="sc">%&gt;%</span></span>
 <span id="cb41-3"><a href="#cb41-3"></a>  <span class="fu">plot_ggpairs</span>(Attrition)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="Automated_Machine_Learning_with_H2O_files/figure-html/unnamed-chunk-28-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10"><img src="Automated_Machine_Learning_with_H2O_files/figure-html/unnamed-chunk-28-1.png" class="img-fluid figure-img" width="672"></a></p>
+<figure class="figure"><p><a href="Automated_Machine_Learning_with_H2O_files/figure-html/unnamed-chunk-28-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10"><img src="Automated_Machine_Learning_with_H2O_files/figure-html/unnamed-chunk-28-1.png" class="img-fluid figure-img" width="672"></a></p>
 </figure>
 </div>
 </div>
 </div>
 
 
-</section>
-</section>
-
-</main> <!-- /main -->
-<script id="quarto-html-after-body" type="application/javascript">
+</section></section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -1163,8 +1106,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","selector":".lightbox","closeEffect":"zoom","descPosition":"bottom","loop":true});</script>
-
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","openEffect":"zoom","loop":true,"descPosition":"bottom","closeEffect":"zoom"});</script>
 
 
 </body></html>
